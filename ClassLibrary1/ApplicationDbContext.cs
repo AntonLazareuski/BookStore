@@ -1,4 +1,4 @@
-﻿using BookStore.Entities;
+﻿using BookStore.DAL.Entities;
 using Microsoft.EntityFrameworkCore;
 
 namespace BookStore.DAL
@@ -14,9 +14,12 @@ namespace BookStore.DAL
         public DbSet<Store> Store { get; set; }
         public DbSet<Employee> Employee { get; set; }
 
-        protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
-            optionsBuilder.UseNpgsql("Host=localhost;Port=5432;Database=bookstore;Username=postgres;Password=postgres");
+            modelBuilder.Entity<Book>();
+            modelBuilder.Entity<Employee>();
+            modelBuilder.Entity<Store>();
+                
         }
 
     }

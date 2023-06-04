@@ -1,5 +1,5 @@
 ﻿using BookStore.DAL.Interfaces;
-using BookStore.Entities;
+using BookStore.DAL.Entities;
 using System;
 using System.Collections.Generic;
 using System.Linq;

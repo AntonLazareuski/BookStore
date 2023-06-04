@@ -1,9 +1,9 @@
-﻿
+﻿using BookStore.DAL.Entities.Interfaces;
 using System.ComponentModel.DataAnnotations;
 
-namespace BookStore.Entities
+namespace BookStore.DAL.Entities
 {
-    public class Store
+    public class Store: IBaseEntity
     {
         public int Id { get; set; } 
         public string Name { get; set; }
@@ -11,8 +11,8 @@ namespace BookStore.Entities
 
         [Phone]
         public string PhoneNumber { get; set; }
-        public Employee EmployeeName { get; set; }
-        public Book Book { get; set; }
+        public IEnumerable<Employee> EmployeeName { get; set; }
+        public IEnumerable<Book> Book { get; set; }
 
     }
 }

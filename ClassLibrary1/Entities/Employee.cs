@@ -1,6 +1,8 @@
-﻿namespace BookStore.Entities
+﻿using BookStore.DAL.Entities.Interfaces;
+
+namespace BookStore.DAL.Entities
 {
-    public class Employee
+    public class Employee: IBaseEntity
     {
         public int Id { get; set; } 
         public string Name { get; set; }

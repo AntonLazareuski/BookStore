@@ -1,10 +1,5 @@
 ﻿using BookStore.DAL.Interfaces;
-using BookStore.Entities;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using BookStore.DAL.Entities;
 
 namespace BookStore.DAL.Repositories
 {
